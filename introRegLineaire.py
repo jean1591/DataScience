@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 # Fetch data from house.csv
 house_data_raw = pd.read_csv("house.csv")
-# Exclud abherant entries: rent over 7000
+# Exclude abherant entries: rent over 7000
 house_data = house_data_raw[house_data_raw["loyer"] < 7000]
 
 x = np.matrix([np.ones(house_data.shape[0]), house_data["surface"]]).T
